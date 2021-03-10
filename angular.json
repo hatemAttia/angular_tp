@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "epi": {
+    "tp1": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/epi",
+            "outputPath": "dist/tp1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +24,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/bootstrap.css",
+              "src/assets/css/style.css"
+
+
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-1.10.2.js",
+              "src/assets/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "epi:build"
+            "browserTarget": "tp1:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "epi:build:production"
+              "browserTarget": "tp1:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "epi:build"
+            "browserTarget": "tp1:build"
           }
         },
         "test": {
@@ -111,15 +119,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "epi:serve"
+            "devServerTarget": "tp1:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "epi:serve:production"
+              "devServerTarget": "tp1:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "epi"
+  "defaultProject": "tp1"
 }
