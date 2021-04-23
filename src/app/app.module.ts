@@ -11,6 +11,9 @@ import { routes } from './shared/component/router.config';
 import { RouterModule } from '@angular/router';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { TruncatePipe } from './shared/pipes/truncate.pipe';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,12 @@ import { TruncatePipe } from './shared/pipes/truncate.pipe';
     ProductsComponent,
     UsersComponent,
     ProductItemComponent,
-    TruncatePipe
+    TruncatePipe,
+    AddProductComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    HttpClientModule,
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
