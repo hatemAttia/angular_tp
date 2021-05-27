@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "tp1": {
+        "angular_tp": {
             "projectType": "application",
             "schematics": {},
             "root": "",
@@ -13,7 +13,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/tp1",
+                        "outputPath": "dist/angular_tp",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -68,19 +68,19 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "tp1:build",
+                        "browserTarget": "angular_tp:build",
                         "proxyConfig": "src/proxy.config.json"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "tp1:build:production"
+                            "browserTarget": "angular_tp:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "tp1:build"
+                        "browserTarget": "angular_tp:build"
                     }
                 },
                 "test": {
@@ -117,16 +117,16 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "e2e/protractor.conf.js",
-                        "devServerTarget": "tp1:serve"
+                        "devServerTarget": "angular_tp:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "tp1:serve:production"
+                            "devServerTarget": "angular_tp:serve:production"
                         }
                     }
                 }
             }
         }
     },
-    "defaultProject": "tp1"
+    "defaultProject": "angular_tp"
 }
