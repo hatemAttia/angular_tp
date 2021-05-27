@@ -1,7 +1,7 @@
 <div class="col-md-4">
     <strong>Send a Quick Query </strong>
     <hr>
-    <form [formGroup]="productForm" (ngSubmit)="addProduct(productForm.value)" class="form-horizontal">
+    <form [formGroup]="productForm" (ngSubmit)="addProduct()" class="form-horizontal">
         <div class="row" [ngClass]="{'has-error':!productForm.controls['name'].valid && productForm.controls['name'].touched}">
             <div class="col-md-6 col-sm-6">
                 <div class="form-group">

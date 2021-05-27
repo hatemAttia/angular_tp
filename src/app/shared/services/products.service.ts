@@ -8,7 +8,7 @@ import { Observable, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-private products:Array<Product>
+ products:any;
   constructor(private http: HttpClient) { }
   getProducts():any{
     this.products=[{

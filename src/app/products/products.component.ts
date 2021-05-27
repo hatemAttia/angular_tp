@@ -7,7 +7,7 @@ import { ProductsService } from '../shared/services/products.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-private products;
+ products;
   constructor(private productService:ProductsService) { }
  // private product;
   ngOnInit() {
