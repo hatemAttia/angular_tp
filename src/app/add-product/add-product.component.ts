@@ -16,7 +16,7 @@ export class AddProductComponent implements OnInit {
   pSubmit: boolean = false;
 
   constructor(private productBuilder: FormBuilder,
-    productService: ProductsService) {
+    private productService: ProductsService) {
 
   }
 
@@ -24,10 +24,13 @@ export class AddProductComponent implements OnInit {
     this.productForm = this.productBuilder.group({
       'name': [null, Validators.required],
       'price': [null, Validators.compose([Validators.required, Validators.pattern("^(0|[1-9][0-9]*)$")])],
-      'description': [null, Validators.required, Validators.minLength(20)]
+      'description': [null, Validators.required]
     });
   }
 
-  addProduct(){}
-
+  addProduct() {
+    this.productService.addProduct(this.productForm.value).subscribe(res => {
+    console.log(res);
+    });
+  }
 }

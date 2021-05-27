@@ -2,14 +2,13 @@
     <div class="thumbnail product-box">
         <img src="assets/img/dummyimg.png" alt="" />
         <div class="caption">
-            <h3><a href="#">{{product.name}}</a></h3>
-            <p>Price : <strong>{{product.price}}</strong> </p>
+            <h3><a href="#">{{product._source.name}}</a></h3>
+            <p>Price : <strong>{{product._source.price}}</strong> </p>
             <p><a href="#">Ptional dismiss button </a></p>
-            <p>{{product.description |truncate:40:'..'}} </p>
+            <p>{{product._source.description |truncate:40:'..'}} </p>
 
             <p>Ptional dismiss button in tional dismiss button in </p>
-            <p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="#" class="btn btn-primary"
-                    role="button">See Details</a></p>
+            <p><a href="#" class="btn btn-success" role="button">Add To Cart</a> <a href="#" class="btn btn-primary" role="button">See Details</a></p>
         </div>
     </div>
 </div>
